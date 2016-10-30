@@ -14,6 +14,7 @@ Aplikacija bi delovala tako na računalniku kot tudi na telefonu. Oboje bi bilo 
   - Ob strani je stranski meni, v katerem so kategorije (Dom, Služba, Osebno, Potovanje, Nakup, Rojstni dan) in možnost izbora pogleda opravkov še za prihajajoče dni.
   - Na vrhu strani je prav tako meni, kjer je uporabnikova slika in ime (tam je tudi možnost urejanja profila), koledar, ter obvestila.
   - Uporabnik lahko preko brskalnika dodaja opravila za današnji ali prihodnje dni, lahko ureja in briše opravila.
+  - Poleg posameznega opravila je kvadratek, na katerega klikneš in tako označiš, da si zastavljeno opravilo opravil.
   
 2. Mobilna aplikacija
   - Ob zagonu aplikacije se pojavi osnovni obrazec za vnos uporabniškega imena in gesla in možnost registracije.
@@ -21,6 +22,7 @@ Aplikacija bi delovala tako na računalniku kot tudi na telefonu. Oboje bi bilo 
   - Ob potegu iz leve strani ekrana proti desni, se pojavi meni s kategorijami in možnostjo pogleda opravkov za prihodnje dni, koledar.
   - Na vrhu ekrana je vrstica z obvestili in uporabniškim računom.
   - Uporabnik lahko dodaja opravila za današnji ali prihodnje dni, lahko ureja in briše opravila.
+  - Poleg posameznega opravila je kvadratek, na katerega klikneš in tako označiš, da si zastavljeno opravilo opravil. Ko so označeni vsi kvadratki, aplikacija javi spodbudno sporočilo in obvestilo o uspešno opravljenih vseh zastavljenih ciljih.
   
 ## Dodajanje, urejanje, brisanje opravil
 Bistvo To-Do lista so opravila, ki jih uporabnik vnese za posamezen dan. Ta opravila pa so različna, zato imamo pri dodajanju opravila veliko možnosti.
