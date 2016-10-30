@@ -1,3 +1,4 @@
-#Datoteke
+DATOTEKE
 
-main = žični okvir strani, ki se pojavi, ko se uporabnik prijavi v sistem
+First = žični okvir prve strani, kjer imamo možnost vpisa v sistem, oziroma registracije, ter osnovne informacije o aplikaciji
+Main = žični okvir strani, ki se pojavi, ko se uporabnik prijavi v sistem
