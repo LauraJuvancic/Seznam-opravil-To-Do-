@@ -91,3 +91,12 @@ function showForm(element) {
     }
 
 }
+
+function showlogin(element) {
+    if(document.getElementById('login').style.display == "block")
+        document.getElementById('login').style.display = "none";
+    else
+        document.getElementById('login').style.display = "block";
+
+    return false;
+}
