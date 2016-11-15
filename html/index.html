@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>TO-DO</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="functions.js"></script>
 
 </head>
 <body>
@@ -17,6 +18,11 @@
                 <li><a href="Home">HOME</a></li>
                 <li><a href="Notifications">NOTIFICATIONS</a> </li>
                 <li><a href="Calendar>">CALENDAR</a> </li>
+            </ul>
+        </div>
+        <div id="name">
+            <ul>
+                <li><a href="User">USER</a> </li>
             </ul>
         </div>
     </div>
@@ -41,7 +47,147 @@
     </div>
 
     <div id="content">
-        <img src="pictures/ozadje.png" alt="ozadje">
+       <img src="pictures/ozadje.png" alt="ozadje">
+        <div id="list"></div>
+        <div id="things">
+            <ul>
+                <li><h1>THINGS TO DO:</h1></li>
+            </ul>
+            <button type="button" onclick="showFormList()">Add new task:</button>
+        </div>
+        <div id="formlist"></div>
+        <div id="formtext">
+            <h1>TASK:</h1>
+            <label for="category">Category:</label>
+            <select id="category" name="category" onchange="showForm(this)">
+                <option value="select">Select:</option>
+                <option value="home">Home</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="travel">Travel</option>
+                <option value="shopping">Shopping</option>
+                <option value="birthday">Birthday</option>
+                <option value="cooking">Cooking</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div id="formhome">
+            <td>
+                <label for="namehome">Name:</label>
+                <input id="namehome" type="text">
+                <label for="whenhome">When:</label>
+                <input id="whenhome" type="date">
+                <label for="infohome">Info:</label>
+                <textarea id="infohome" rows="4"></textarea>
+                <label for="alarmhome">Alarm:</label>
+                <input id="alarmhome" type="checkbox">
+
+            </td>
+            <button id="addhome" type="button">Add to list</button>
+        </div>
+
+        <div id="formwork">
+            <td>
+                <label for="namework">Name:</label>
+                <input id="namework" type="text">
+                <label for="whenwork">When:</label>
+                <input id="whenwork" type="date">
+                <label for="infowork">Info:</label>
+                <textarea id="infowork" rows="4"></textarea>
+                <label for="mailwork">Mails:</label>
+                <input id="mailwork" type="email">
+                <label for="coworkers">Co-workers:</label>
+                <input id="coworkers" type="text">
+                <label for="alarmwork">Alarm:</label>
+                <input id="alarmwork" type="checkbox">
+
+            </td>
+            <button id="addwork" type="button">Add to list</button>
+        </div>
+
+        <div id="formpersonal">
+            <td>
+                <label for="namepersonal">Name:</label>
+                <input id="namepersonal" type="text">
+                <label for="whenpersonal">When:</label>
+                <input id="whenpersonal" type="date">
+                <label for="infopersonal">Info:</label>
+                <textarea id="infopersonal" rows="4"></textarea>
+                <label for="alarmpersonal">Alarm:</label>
+                <input id="alarmpersonal" type="checkbox">
+
+            </td>
+            <button id="addpersonal" type="button">Add to list</button>
+        </div>
+
+        <div id="formtravel">
+            <td>
+                <label for="nametravel">Name:</label>
+                <input id="nametravel" type="text">
+                <label for="fromtravel">From:</label>
+                <input id="fromtravel" type="date">
+                <label for="totravel">To:</label>
+                <input id="totravel" type="date">
+                <label for="wheretravel">Where:</label>
+                <input id="wheretravel" type="text">
+                <label for="packtravel">Pack:</label>
+                <textarea id="packtravel" rows="4"></textarea>
+                <label for="dontforgettravel">Don't forget:</label>
+                <textarea id="dontforgettravel" rows="4"></textarea>
+                <label for="alarmpersonal">Alarm:</label>
+                <input id="alarmtravel" type="checkbox">
+
+            </td>
+            <button id="addtravel" type="button">Add to list</button>
+        </div>
+
+        <div id="formshopping">
+            <td>
+                <label for="nameshopping">Name:</label>
+                <input id="nameshopping" type="text">
+                <label for="whenshopping">When:</label>
+                <input id="whenshopping" type="date">
+                <label for="whatshopping">What to buy:</label>
+                <textarea id="whatshopping" rows="10"></textarea>
+                <label for="alarmshopping">Alarm:</label>
+                <input id="alarmshopping" type="checkbox">
+            </td>
+            <button id="addshopping" type="button">Add to list</button>
+        </div>
+
+        <div id="formbirthday">
+            <td>
+                <label for="namebirthday">Name:</label>
+                <input id="namebirthday" type="text">
+                <label for="whenbirthday">When:</label>
+                <input id="whenbirthday" type="date">
+                <label for="ideasbirthday">Present ideas:</label>
+                <textarea id="ideasbirthday" rows="10"></textarea>
+                <label for="alarmbirthday">Alarm:</label>
+                <input id="alarmbirthday" type="checkbox">
+            </td>
+            <button id="addbirthday" type="button">Add to list</button>
+        </div>
+
+        <div id="formcookinglist"></div>
+        <div id="formcooking">
+            <td>
+                <label for="namecooking">Name:</label>
+                <input id="namecooking" type="text">
+                <label for="whencooking">When:</label>
+                <input id="whencooking" type="date">
+                <label for="ingredientscooking">Ingredients:</label>
+                <textarea id="ingredientscooking" rows="10"></textarea>
+                <label for="makecooking">How to make it:</label>
+                <textarea id="makecooking" rows="10"></textarea>
+                <label for="alarmcooking">Alarm:</label>
+                <input id="alarmcooking" type="checkbox">
+            </td>
+            <button id="addcooking" type="button">Add to list</button>
+        </div>
+
     </div>
+
 </body>
 </html>
