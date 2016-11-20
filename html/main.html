@@ -11,21 +11,25 @@
 
     </div>
     <div id="band">
-        <img src="pictures/logo-to-do.png" alt="logo" />
+        <a href="main.html"><img src="pictures/logo-to-do.png" alt="logo" /></a>
 
         <div id="sign">
             <ul>
-                <li><a href="signup">SIGN UP</a></li>
+                <li><a href="signup.html">SIGN UP</a></li>
                 <li><a href="login" onclick="return showlogin(this)">LOG IN</a></li>
             </ul>
         </div>
     </div>
 
+    <div id="loginlist"></div>
     <div id="login">
-        <label for="usernamelogin">Username:</label>
-        <input id="usernamelogin" type="text"><br>
-        <label for="passwordlogin">Password:</label>
-        <input id="passwordlogin" type="text">
+        <td>
+            <label for="usernamelogin">Username:</label>
+            <input id="usernamelogin" type="text"><br>
+            <label for="passwordlogin">Password:</label>
+            <input id="passwordlogin" type="text">
+            <button id="buttonlogin" type="button" onClick="parent.location='index.html'">Log in</button>
+        </td>
     </div>
 </body>
 </html>
