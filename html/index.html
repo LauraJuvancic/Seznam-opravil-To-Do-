@@ -12,17 +12,17 @@
 
     </div>
     <div id="band">
-        <img src="pictures/logo-to-do.png" alt="logo" />
+        <a href="index.html"><img src="pictures/logo-to-do.png" alt="logo" /></a>
         <div id="menu">
             <ul>
-                <li><a href="Home">HOME</a></li>
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="Notifications">NOTIFICATIONS</a> </li>
                 <li><a href="Calendar>">CALENDAR</a> </li>
             </ul>
         </div>
         <div id="name">
             <ul>
-                <li><a href="User">USER</a> </li>
+                <li><a href="User" onclick="return showUser(this)">USER</a> </li>
             </ul>
         </div>
     </div>
@@ -187,6 +187,14 @@
             <button id="addcooking" type="button">Add to list</button>
         </div>
 
+        <div id="userlist"></div>
+        <div id="user">
+            <td>
+                <label>Name and surname</label><br>
+                <button id="buttonlogin" type="button" >Edit profile</button><br>
+                <button id="logout" type="button" onClick="parent.location='main.html'">Log out</button>
+            </td>
+        </div>
     </div>
 
 </body>
