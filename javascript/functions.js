@@ -1,3 +1,7 @@
+/**
+ * Created by laurajuvancic on 10/11/16.
+ */
+
 function showFormList() {
     document.getElementById('formlist').style.display = "block";
     document.getElementById('formtext').style.display = "block";
@@ -93,10 +97,27 @@ function showForm(element) {
 }
 
 function showlogin(element) {
-    if(document.getElementById('login').style.display == "block")
+    if(document.getElementById('login').style.display == "block") {
         document.getElementById('login').style.display = "none";
-    else
+        document.getElementById('loginlist').style.display = "none";
+    }
+    else {
         document.getElementById('login').style.display = "block";
+        document.getElementById('loginlist').style.display = "block";
+    }
+
+    return false;
+}
+
+function showUser(element) {
+    if(document.getElementById('user').style.display == "block") {
+        document.getElementById('user').style.display = "none";
+        document.getElementById('userlist').style.display = "none";
+    }
+    else {
+        document.getElementById('user').style.display = "block";
+        document.getElementById('userlist').style.display = "block";
+    }
 
     return false;
 }
