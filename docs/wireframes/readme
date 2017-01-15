@@ -1,8 +1,0 @@
-DATOTEKE
-  
-First = žični okvir prve strani, kjer imamo možnost vpisa v sistem, oziroma registracije, ter osnovne informacije o aplikaciji
-Main = žični okvir strani, ki se pojavi, ko se uporabnik prijavi v sistem
-Shopping = žični okvir strani, ki se pojavi, ko uporabnik klikne na opravilo, ki je v kategoriji nakup (pojavi se nakupovalni 
-            listek)
-Recipe = žični okvir strani, ki se pojavi, ko kliknemo na opravilo, ki je dano v kategorijo recept 
-Signup = žični okvir strani za vpis v sistem

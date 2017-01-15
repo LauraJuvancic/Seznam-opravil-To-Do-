@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TO-DO</title>
+    <link rel="stylesheet" href="{% static 'todo/style.css' %}">
+    <script src="{% static 'todo/functions.js' %}"></script>
+
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <div id="band">
+            <a href="/Homepage/"><img src="{% static 'todo/images/logo2_2.png' %}" alt="logo" /></a>
+            <div id="menu">
+                <ul>
+                    <li><a href="Notifications" onclick="return showNotifications(this)"><img src="{% static 'todo/images/alarm.png' %}" alt="logo" /></a> </li>
+                    <!--<li><a href="#" "><img src="{% static 'todo/images/calendar.png' %}" alt="logo" /></a> </li>-->
+                    <li><a href="User" onclick="return showUser(this)"><img src="{% static 'todo/images/user.png' %}" alt="logo" /></a> </li>
+                </ul>
+            </div>
+        </div>
+        <div id="sidemenuband">
+        <div id="sidemenu">
+            <ul>
+                <li><a href="/Homepage/">Today</a></li>
+                <li><a href="/7days/">Next 7 days</a> </li>
+                <li><a href="">  </a></li>
+                <li><a href="/Home/">Home </a></li>
+                <li><a href="/Work/">Work</a> </li>
+                <li><a href="/Personal/">Personal</a> </li>
+                <li><a href="/Travel/">Travel</a> </li>
+                <li><a href="/Shopping/">Shopping</a> </li>
+                <li><a href="/Birthday/">Birthday</a> </li>
+                <li><a href="/Cooking/">Cooking</a> </li>
+            </ul>
+        </div>
+        </div>
+        <section class="">
+            {% block main %}
+            {% endblock %}
+        </section>
+    {% else %}
+        <div id="band">
+            <a href=""><img src="{% static 'todo/images/logo2_2.png' %}" alt="logo" /></a>
+
+            <div id="sign">
+                <ul>
+                    <li><a href="/signup/">SIGN UP</a></li>
+                    <li><a href="#" onclick="return showlogin(this)">LOG IN</a></li>
+                </ul>
+            </div>
+        </div>
+        <section class="">
+            {% block sign %}
+            {% endblock %}
+        </section>
+    {% endif %}
+
+    <div id="userlist"></div>
+    <div id="user">
+        <label>{{ user.first_name }} {{ user.last_name }}</label><br>
+        <form action="/user/{{ user.id }}" >
+            <button id="buttoneditprofile" type="submit"  >Edit profile</button><br>
+        </form>
+
+        <form action="/logout/" >
+            <button id="logout" type="submit" name="logout">Log out</button>
+        </form>
+
+    </div>
+
+    <div id="notifications">
+        <h2>Notifications:</h2>
+        {% for p in past %}
+            <p><img src="{% static 'todo/images/clock.png' %}" alt="clock">
+                <b><i>Unfinished:</i></b> {{ p.name }} from {{ p.date }}, category: {{ p.category }}
+            </p>
+        {% endfor %}
+        {% for f in future %}
+            <p><img src="{% static 'todo/images/clock.png' %}" alt="clock">
+                <b>Alarm:</b> {{ f.name }} till {{ f.date }}, category: {{ f.category }}
+            </p>
+        {% endfor %}
+    </div>
+
+    <div id="loginlist"></div>
+    <div id="login">
+        <form method='POST' action="{% url 'todo:first' %}" name="login" class="lform">
+            {% csrf_token %}
+            {{ forml.as_p }}
+            <button type="submit" name="login" >Log in</button>
+        </form>
+    </div>
+</body>
+</html>
