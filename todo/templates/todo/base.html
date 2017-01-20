@@ -24,16 +24,16 @@
         <div id="sidemenuband">
         <div id="sidemenu">
             <ul>
-                <li><a href="/Homepage/">Today</a></li>
-                <li><a href="/7days/">Next 7 days</a> </li>
+                <li><a href="{% url 'todo:index'%}">Today</a></li>
+                <li><a href="{% url 'todo:7days'%}">Next 7 days</a> </li>
                 <li><a href="">  </a></li>
-                <li><a href="/Home/">Home </a></li>
-                <li><a href="/Work/">Work</a> </li>
-                <li><a href="/Personal/">Personal</a> </li>
-                <li><a href="/Travel/">Travel</a> </li>
-                <li><a href="/Shopping/">Shopping</a> </li>
-                <li><a href="/Birthday/">Birthday</a> </li>
-                <li><a href="/Cooking/">Cooking</a> </li>
+                <li><a href="{% url 'todo:home'%}">Home </a></li>
+                <li><a href="{% url 'todo:work'%}">Work</a> </li>
+                <li><a href="{% url 'todo:personal'%}">Personal</a> </li>
+                <li><a href="{% url 'todo:travel'%}">Travel</a> </li>
+                <li><a href="{% url 'todo:shopping'%}">Shopping</a> </li>
+                <li><a href="{% url 'todo:birthday'%}">Birthday</a> </li>
+                <li><a href="{% url 'todo:cooking'%}">Cooking</a> </li>
             </ul>
         </div>
         </div>
